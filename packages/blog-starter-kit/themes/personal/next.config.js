@@ -12,3 +12,16 @@ module.exports = withTM({
     ],
   },
 });
+
+async rewrites() {
+    return [
+      {
+        source: "/tai",
+        destination: "https://starter-kit-sand-one.vercel.app/tai",
+      },
+      {
+        source: "/tai/:path*",
+        destination: "https://starter-kit-sand-one.vercel.app/tai/:path*",
+      },
+    ];
+  },
