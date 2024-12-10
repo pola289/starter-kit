@@ -91,3 +91,16 @@ const config = {
 };
 
 module.exports = config;
+
+async rewrites() {
+    return [
+      {
+        source: "/blog",
+        destination: "https://starter-kit-9xvp.vercel.app/blog",
+      },
+      {
+        source: "/blog/:path*",
+        destination: "https://starter-kit-9xvp.vercel.app/blog/:path*",
+      },
+    ];
+  },
